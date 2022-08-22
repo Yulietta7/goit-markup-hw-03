@@ -12,10 +12,12 @@
     --accent-color: #2196F3;
     --logo-color: #000000;
     --modal-btn-color: #188CE8;
+    --portfolio-border-color: #EEEEEE;
+    --header-border-color: #ECECEC;
 }
 
 body {
-    background-color: var(--white-font-color:);
+    background-color: var(--white-font-color);
     color: var(--main-text-color);
     font-family: var(--primary-font-family);
     font-size: 14px;
@@ -43,6 +45,11 @@ ul {
     padding-left: 0;
 }
 
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 .container {
     width: 1200px;
     padding-left: 15px;
@@ -57,6 +64,7 @@ ul {
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 /* =====Компоненти-кінець */
@@ -65,6 +73,7 @@ ul {
 
 /* Лого-хедер */
 .logo {
+    margin-right: 93px;
     font-family: var(--secondary-font-family);
     font-weight: 700;
     font-size: 26px;
@@ -78,24 +87,34 @@ ul {
         color: var(--accent-color);
     }
 
+.header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    background-color: var(--white-font-color);
+    border-bottom: 1px solid var(--header-border-color);
+    
+
+}
+
 .header-container {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* Навігація */
 .navigation {
     display: flex;
+    align-items: center;
 }
 .nav-list {
     display: flex;
+    align-items: center;
 }
 
 .nav-list-item:not(:last-child) {
     margin-right: 50px;
-}
-
-.nav-list li {
-    outline: 2px solid red;
 }
 
 .nav-list-link {
@@ -145,10 +164,6 @@ ul {
     color: var(--accent-color);
 }
 
-.header {
-    background-color: var(--white-font-color);
-}
-
 /* =====Хедер-кінець===== */
 
 /* =====Мейн контент-початок===== */
@@ -157,8 +172,6 @@ ul {
 .hero {
     background-color: var(--background-dark-color);
     text-align: center;
-
-    outline: 3px solid red;
 }
 
 .hero-title {
@@ -176,10 +189,9 @@ ul {
 
 .modal-btn {
     display: inline-block;
-    min-width: 216px;
-    height: 50px;
-    border-radius: 4px;
     padding: 10px 32px;
+    min-width: 216px;
+    border-radius: 4px;
     border: var(--accent-color);
 
     font-family: inherit;
@@ -198,7 +210,17 @@ ul {
 }
 
 /* Переваги */
+.advantages-list {
+    display: flex;
+}
+
+.advantages-list-item:not(:last-child) {
+    margin-right: 30px;
+}
+
 .advantages-title {
+    margin-bottom: 10px;
+
     line-height: 1.14;
     text-transform: uppercase;
 }
@@ -209,9 +231,28 @@ ul {
 }
 
 /* Чим ми займаємося */
+.activity-list {
+    display: flex;
+    justify-content: space-between;
+}
 
 /* Наша команда */
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team-list-item:not(:nth-child(4n)) {
+    margin-right: 30px;
+}
+
+.team-list-pic {
+    margin-bottom: 30px;
+}
+
 .team-subject {
+    margin-bottom: 10px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -221,7 +262,7 @@ ul {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.19;
-    color: #757575;
+    color: var(--secondary-text-color);
 }
 
 .team {
@@ -229,7 +270,26 @@ ul {
 }
 
 /* Фільтр-портфоліо */
+.btn-list {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-list-item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.btn-list-item {
+    margin-bottom: 50px;
+}
+
 .portfolio-btn {
+    display: inline-block;
+    padding: 6px 22px;
+    min-width: 73px;
+    border-radius: 4px;
+    border: 1px solid var(--background-secondary-grey-color);
+
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -248,6 +308,27 @@ ul {
 }
 
 /* Портфоліо */
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+
+.portfolio-list-item {
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: calc((100% - 90px) / 3);
+
+}
+
+.portfolio-list-wrapper {
+    padding: 20px 24px;
+
+    border: 1px solid var(--portfolio-border-color);
+    border-top: none;
+}
+
 .portfolio-list-title {
     font-size: 18px;
     line-height: 2;
@@ -270,11 +351,22 @@ ul {
 }
 
 /* Лого-футер */
+.footer  {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
 .logo-footer {
+    margin-right: 0;
+    
     color: var(--white-font-color);
     }
 
 /* Контакти-футер */
+.address {
+    margin-top: 20px;
+}
+
 .footer-link-address {
     font-style: normal;
     font-weight: 400;
