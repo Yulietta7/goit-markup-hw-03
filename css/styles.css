@@ -34,6 +34,7 @@ body {
 
 h1,
 h2,
+h3,
 p {
     margin-top: 0;
     margin-bottom: 0;
@@ -43,6 +44,12 @@ ul {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .section {
@@ -88,19 +95,13 @@ ul {
     }
 
 .header {
-    padding-top: 24px;
-    padding-bottom: 24px;
-
     background-color: var(--white-font-color);
     border-bottom: 1px solid var(--header-border-color);
-    
-
 }
 
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 /* Навігація */
@@ -138,6 +139,10 @@ ul {
 }
 
 /* Контакти-хедер */
+.contact-list {
+    margin-left: auto;
+}
+
 .contact-list-item:not(:last-child) {
     margin-right: 50px;
 }
@@ -170,14 +175,19 @@ ul {
 
 /* Герой */
 .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+
     background-color: var(--background-dark-color);
     text-align: center;
 }
 
 .hero-title {
-    margin-top: 0;
+    margin-right: auto;
     margin-bottom: 30px;
-
+    margin-left: auto;
+    
+    width: 696px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -210,6 +220,17 @@ ul {
 }
 
 /* Переваги */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+} 
+
 .advantages-list {
     display: flex;
 }
@@ -221,6 +242,7 @@ ul {
 .advantages-title {
     margin-bottom: 10px;
 
+    font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
 }
@@ -231,6 +253,10 @@ ul {
 }
 
 /* Чим ми займаємося */
+.activity {
+    padding-top: 0;
+}
+
 .activity-list {
     display: flex;
     justify-content: space-between;
@@ -250,6 +276,12 @@ ul {
     margin-bottom: 30px;
 }
 
+.team-list-wrapper {
+    text-align: center;
+
+    background-color: var(--white-font-color);
+}
+
 .team-subject {
     margin-bottom: 10px;
 
@@ -259,6 +291,8 @@ ul {
 }
 
 .team-position {  
+    padding-bottom: 30px;
+
     font-weight: 400;
     font-size: 16px;
     line-height: 1.19;
@@ -330,6 +364,8 @@ ul {
 }
 
 .portfolio-list-title {
+    margin-bottom: 4px;
+
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
@@ -365,6 +401,10 @@ ul {
 /* Контакти-футер */
 .address {
     margin-top: 20px;
+}
+
+.address-list-item:not(:last-child) {
+    margin-bottom: 9px;
 }
 
 .footer-link-address {
